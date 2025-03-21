@@ -41,9 +41,9 @@ function App() {
         console.log("res", res.data)
          
           if(res.data.msg === "good login"){
-
+            console.log("good login hit")
             
-            nav("/admin")
+            nav("/home")
             
           }else {
             

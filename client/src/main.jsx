@@ -4,7 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
-import ProtectedRoute from "../src/components/ProtectedRoutes.jsx";  
+import ProtectedRoute from "../src/components/ProtectedRoutes.jsx"; 
+import HomePage from "../src/pages/Home.jsx" 
+import Profile from "./pages/Profile.jsx"
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
@@ -12,7 +14,9 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/admin" element={<ProtectedRoute />}>
+        <Route element={<ProtectedRoute />}>
+        <Route path ="/home" element={<HomePage />}></Route>
+        <Route path ="/ProfilePage" element={<Profile />}></Route>
           {/* <Route path="loggedIn" element={<LoggedIn />} /> */}
         </Route>
       </Routes>

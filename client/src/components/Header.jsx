@@ -1,4 +1,4 @@
-import logo from '../vite-project/src/assets/logo.jpg'
+import logo from '../assets/logo.jpg'
 import '../styles/Header.css'; 
 
 const Header = () => {
@@ -8,6 +8,7 @@ const Header = () => {
       <h1 className="app-title">
         Poppy's Market
       </h1>
+    
     </header>
   );
 };
