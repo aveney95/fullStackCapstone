@@ -2,7 +2,7 @@
 import UserInfo from '../components/UserInfo'
 import UserListings from '../components/UserListingsCard'
 import { useLocation } from "react-router-dom";
-import {UseData} from '../components/context/Context'
+import {ListingsProvider} from '../components/context/Context'
 
 function Profile() {
   // const user = {
@@ -12,7 +12,7 @@ function Profile() {
   // };
   const location = useLocation();
 const user = location.state
-const{test} = UseData()
+// const{test} = UseData()
 
   const listings = [
     {
@@ -31,7 +31,7 @@ const{test} = UseData()
 
   return (
     <div className="container">
-      {console.warn("test", test)}
+      {/* {console.warn("test", test)} */}
       <p>Profile</p>
       {console.log("Profile PAge HIT", user)}
       <UserInfo user={user} />

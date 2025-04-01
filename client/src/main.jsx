@@ -7,11 +7,11 @@ import App from "./App.jsx";
 import ProtectedRoute from "../src/components/ProtectedRoutes.jsx"; 
 import HomePage from "../src/pages/Home.jsx" 
 import Profile from "./pages/Profile.jsx"
-import { MyProvider } from '../src/components/context/Context'
+import { ListingsProvider } from '../src/components/context/Context'
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
-<MyProvider>
+<ListingsProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -22,6 +22,6 @@ createRoot(document.getElementById("root")).render(
         </Route>
       </Routes>
     </BrowserRouter>
-    </MyProvider>
+    </ListingsProvider>
   </StrictMode>
 );
