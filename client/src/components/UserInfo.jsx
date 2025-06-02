@@ -45,7 +45,8 @@ const UserInfo = ({ user }) => {
       <div className="user-details">
         <h2>{user.name}</h2>
         <p>{user.bio}</p>
-        <p onClick={(e) => handleUpdate(e)}>Update Profile</p>
+        <button onClick={handleUpdate} className="update-button">Update Profile</button>
+
 
         {update ? (
           <div>
