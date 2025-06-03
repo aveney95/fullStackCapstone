@@ -1,6 +1,6 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+    background-color: #436dc2;
     margin: 0;
     padding: 0;
   }
@@ -12,5 +12,74 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
+  } */
+
+  /* Apply sans-serif font to everything in this page */
+/* .container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Optional: refine the page heading */
+/* .container p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #333;
+} */
+
+/* Style all buttons in this page */
+/* .container button {
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.container button:hover {
+  background-color: #f0f0f0;
+  color: #000;
+} */
+
+
+/* Header - Sticky */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation - Sticky */
+.navigation {
+  position: sticky;
+  top: 60px; /* Adjust according to your header height */
+  z-index: 999;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Ensure profile content starts below sticky elements */
+.profile-page {
+  padding-top: 180px; /* Adjust based on the height of the header and navigation */
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Style for other profile content */
+.profile-content {
+  max-width: 900px;
+  margin: 0 auto
+;}

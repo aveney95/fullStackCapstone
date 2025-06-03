@@ -1,5 +1,7 @@
 const mongoose = require("mongoose")
-const Schema = mongoose.Schema 
+const Schema = mongoose.Schema
+const listing = require('./Listing') 
+
 
 const ProfileSchema = new Schema(
     {
@@ -16,7 +18,8 @@ const ProfileSchema = new Schema(
 
         },
         listings: {
-            type: [{}],
+            type: { type: mongoose.Schema.Types.ObjectId, ref: 'listing' },
+
             
 
         },

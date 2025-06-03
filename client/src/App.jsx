@@ -2,14 +2,19 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./App.css"
 import axios from 'axios'
+// import { userProvider } from '../src/components/context/Context'
 
 //this file is handling all of the login and registering of users
+
 
 function App() {
 
   const [login, setLogin] = useState({
     username: '',
     password: ''
+  })
+  const [loggedIn, setLoggedIn] = useState({
+
   })
   const [register, setRegister] = useState({
     username: '',
@@ -42,8 +47,9 @@ function App() {
          
           if(res.data.msg === "good login"){
             console.log("good login hit")
-            
-            nav("/home")
+            console.log(res.data)
+            setLoggedIn(res.data.found) 
+            nav("/home", {state: {loggedIn: res.data.found}})
             
           }else {
             
